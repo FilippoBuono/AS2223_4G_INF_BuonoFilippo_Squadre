@@ -42,6 +42,8 @@ namespace Library
         /// <returns>True if player has been inserted</returns>
         public bool AddPlayer(Player player)
         {
+            
+                
             // TODO T.2
         }
 
@@ -54,7 +56,13 @@ namespace Library
         /// <returns>True if captain has been setted</returns>
         public bool AddCaptain(Player captain)
         {
+            if (captain.Role == Player.ERole.Rosa)
+            {
+                players.Add(captain);
+                return true;
+            }
 
+            else return false;
             // TODO T.3
         }
 
