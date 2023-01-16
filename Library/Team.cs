@@ -42,8 +42,18 @@ namespace Library
         /// <returns>True if player has been inserted</returns>
         public bool AddPlayer(Player player)
         {
-            
-                
+            if (player.Description().Contains("Rosa") && players.Count <= MAX_ROSA_PLAYERS)
+            {
+                players.Add(player);
+                return true;
+            }
+            if (player.Description().Contains("Riserva") && players.Count <= MAX_RISERVA_PLAYERS)
+            {
+                players.Add(player);
+                return true;
+            }
+            else return false;
+
             // TODO T.2
         }
 
